@@ -1,0 +1,28 @@
+{
+  "name": "air-guzheng",
+  "version": "1.1.0",
+  "description": "空气古筝 — 拨弦 + 按弦滑音 + 颤摇",
+  "instrument": "guzheng",
+  "model": {
+    "strings": 21,
+    "tuning": "D major pentatonic (宫商角徵羽)",
+    "range": "D3–D7",
+    "synthesis": "Karplus-Strong–inspired pluck",
+    "left_hand": "horizontal drag after hold = pitch bend −2..+3 semitones",
+    "ring": "select string only — pluck via touch or cane"
+  },
+  "gestures": {
+    "touch": {
+      "tap_or_glide": { "action": "pluck" },
+      "hold_horizontal_drag": { "action": "press_bend" }
+    },
+    "ring": {
+      "tilt_left_right": { "action": "select_string", "threshold_deg": 5, "throttle_frames": 8 }
+    },
+    "cane": {
+      "tap": { "action": "pluck_selected", "accel_spike": 8, "throttle_frames": 6 },
+      "swing": { "action": "change_string", "threshold": 3, "throttle_frames": 6 }
+    }
+  },
+  "bend_semitones": { "min": -2, "max": 3 }
+}

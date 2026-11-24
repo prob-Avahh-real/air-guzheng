@@ -1,0 +1,14 @@
+{
+  "appId": "com.airguzheng.app",
+  "appName": "空气古筝",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0e1a22"
+    }
+  }
+}

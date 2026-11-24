@@ -1,0 +1,17 @@
+{
+  "name": "air-guzheng",
+  "version": "1.0.0",
+  "private": true,
+  "description": "空气古筝 — virtual guzheng via touch, smart ring & cane",
+  "scripts": {
+    "build": "node scripts/build-web.js",
+    "sync": "npm run build && npx cap sync android",
+    "open:android": "npx cap open android",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  }
+}
